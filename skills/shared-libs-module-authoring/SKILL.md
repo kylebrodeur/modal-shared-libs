@@ -37,7 +37,8 @@ copy hand-edit = drift = refused by `mtk libs check`.
 - Hooks(tags, name): closed tag set per consumer; registering an
   undeclared tag raises ValueError("unknown hook tag").
 - fire(tag, *args): ordered; errors contained + reported via
-  last_errors(tag); returns the handlers' results.
+  last_errors(tag); returns the list of contained ERROR strings (handler
+  return values are discarded).
 - Two registration forms: @hooks.on(tag) decorator +
   hooks.register(tag, fn); registrations coexist in call order.
 - New tags = the CONSUMER's release (its tag set is closed); the

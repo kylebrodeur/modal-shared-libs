@@ -24,11 +24,12 @@ mtk libs sync            # refresh vendored copies from this repo
 mtk libs check           # parity-check every vendored module (md5); CI runs it
 ```
 
-Current consumers (each vendors `libs/hooks.py` into its tree and fires its
-own closed tag set): `modal-embedding-server`, `modal-inference-server`,
+Vendoring targets: `modal-embedding-server`, `modal-inference-server`,
 `modal-vision-server`, `modal-finetune-server`, `modal-vault-server`, and
-`modal-toolkit` - each package's README has a "Lifecycle hooks" section
-naming its tags.
+`modal-toolkit` — each carries the vendored `libs/hooks.py`. The five
+packages instantiate their own hook seam and document their closed tag
+sets in a "Lifecycle hooks" README section (`modal-toolkit` vendors the
+module as a target but fires no tag set of its own).
 
 A vendored file's header names the canonical home:
 
