@@ -1,7 +1,7 @@
 # modal-shared-libs
 
 The Modal Toolkit family's **shared library home**: stdlib-first modules
-every package (and every overlay lane) can consume anywhere — no Modal, no
+every package (and every overlay lane) can consume anywhere - no Modal, no
 framework dependencies.
 
 | Module | Purpose |
@@ -26,7 +26,7 @@ mtk libs check           # parity-check every vendored module (md5); CI runs it
 
 Vendoring targets: `modal-embedding-server`, `modal-inference-server`,
 `modal-vision-server`, `modal-finetune-server`, `modal-vault-server`, and
-`modal-toolkit` — each carries the vendored `libs/hooks.py`. The five
+`modal-toolkit` - each carries the vendored `libs/hooks.py`. The five
 packages instantiate their own hook seam and document their closed tag
 sets in a "Lifecycle hooks" README section (`modal-toolkit` vendors the
 module as a target but fires no tag set of its own).
@@ -39,7 +39,7 @@ family repo: <package>, md5 <hash>. Canonical source of truth;
 report fixes there, not here.
 ```
 
-Hand-editing a vendored copy is drift — CI fails the tree.
+Hand-editing a vendored copy is drift - CI fails the tree.
 
 ## Writing code on the hooks seam
 
@@ -69,5 +69,5 @@ uv run pytest tests -q
 
 ## License
 
-Apache-2.0 — part of the Modal Toolkit family
+Apache-2.0 - part of the Modal Toolkit family
 (https://github.com/kylebrodeur/modal-toolkit).

@@ -1,4 +1,4 @@
-# AGENTS.md — modal-shared-libs
+# AGENTS.md - modal-shared-libs
 
 Agent instructions for THIS repo (v0.1.1 on `main`). The family-wide
 rules live in the system workspace's AGENTS.md
