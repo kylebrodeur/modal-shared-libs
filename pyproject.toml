@@ -1,6 +1,6 @@
 [project]
 name = "modal-shared-libs"
-version = "0.1.2"
+version = "0.1.3"
 description = "Shared stdlib-first modules for the Modal Toolkit family: hooks (the lifecycle seam), and future shared pieces; vendored verbatim into each package"
 requires-python = ">=3.10"
 dependencies = []
