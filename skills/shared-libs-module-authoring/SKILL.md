@@ -1,8 +1,6 @@
 ---
 name: shared-libs-module-authoring
-description: Author/upgrade shared stdlib modules in the canonical home, refresh vendored copies, and keep the parity contract across the family.
-
-Use when changing libs/hooks.py, cutting a new modal-shared-libs release, or when mtk libs check rejects a vendored copy.
+description: Use when changing libs/hooks.py, cutting a modal-shared-libs release, or when mtk libs check rejects a vendored copy. Author or upgrade shared stdlib modules in the canonical home, refresh vendored copies, keep the parity contract.
 license: Apache-2.0
 metadata:
   author: kylebrodeur
