@@ -8,6 +8,13 @@ framework dependencies.
 | :--- | :--- |
 | `libs/hooks.py` | The lifecycle hook seam: per-consumer closed tag sets, `@on(tag)` / `register()`, ordered multi-registration, contained + reported errors |
 
+## Docs
+
+This repo has no `docs/` tree: this README is its only doc, and the
+source docstring (`libs/hooks.py`) stays authoritative. Each consuming
+package documents its own closed tag set in a "Lifecycle hooks" section
+of its README.
+
 ## Install
 
 ```bash
@@ -54,13 +61,27 @@ hooks = Hooks(("request.pre", "request.post"), name="embedding")  # the consumer
 def authz(scope, request): ...
 
 
+# dynamic form (same registry): hooks.register("request.pre", fn)
+
 hooks.fire("request.pre", scope, request)  # ordered; errors contained + recorded
 ```
+
+An overlay lane consumes the package's own instance, not a private one:
+the package constructs its hook seam (say `Hooks(("boot.pre", "boot.post"), name="victoriametrics")`)
+and an overlay registers on the same closed tag set from deploy-side
+code, so the lane's hooks run inside the package's fires without a
+source edit (see any package README's "Lifecycle hooks" section for
+that package's authoritative tags).
 
 Contract guarantees: unknown tags refuse; a broken hook degrades that
 lane only (never the host); multiple lanes' hooks coexist in
 registration order; the tag list changes only in the consumer's
-releases.
+releases. Every fire's errors are contained and reported: `fire(tag, ...)` returns
+the error strings and `last_errors(tag)` keeps the latest
+fire's errors for health-style reporting (both refuse undeclared tags);
+`unregister(tag, fn)` is an idempotent no-op for a missing handler and
+`registered(hooks, tag, fn)` yields scoped one-off registration that
+unregisters on exit.
 
 ## Testing
 
