@@ -1,3 +1,5 @@
+<img src="https://kylebrodeur.xyz/brand/readme-headers/modal-shared-libs.png" alt="modal-shared-libs: stdlib-first shared modules for the Modal Toolkit family" width="100%">
+
 # modal-shared-libs
 
 ---
