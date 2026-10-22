@@ -11,6 +11,8 @@ The Modal Toolkit projects remain open-source and free to use. For production de
 - **[Modal Vendor-Overlay Refactor ($247)](https://github.com/sponsors/kylebrodeur):** One ready-to-review pull request that moves one supported Modal package into a vendored overlay.
 - **[GitHub Sponsors ($9-$389/mo or one-time)](https://github.com/sponsors/kylebrodeur):** Monthly support, kit licenses, architecture calls, and retainer hours. Every tier's exact benefits are on that page.
 
+<img src="https://kylebrodeur.xyz/brand/sponsor-tiers/contact-sheet.png" alt="All twelve sponsorship tiers: Supporter, Single Dev Kit + Dev Chat, Team Dev Kit + Dev Chat, Dev Call, Retainer, Retainer Plus, Coffee, Two Coffees, Three Coffees, Operator Kit, Architecture Audit, and Vendor Refactor" width="900">
+
 ---
 
 The Modal Toolkit family's **shared library home**: stdlib-first modules
